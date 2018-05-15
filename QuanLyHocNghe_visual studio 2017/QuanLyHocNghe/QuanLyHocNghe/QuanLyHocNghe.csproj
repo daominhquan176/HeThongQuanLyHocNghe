@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B1A44A12-5BA6-474B-91A0-B22768193FA8}</ProjectGuid>
+    <ProjectGuid>{962E0E0D-0545-4396-99AB-A37EE9127CC1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -195,9 +195,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805151234578_InitialCreate.cs" />
+    <Compile Include="Migrations\201805151234578_InitialCreate.Designer.cs">
+      <DependentUpon>201805151234578_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805151254479_ThemDuLieuVaoDB.cs" />
+    <Compile Include="Migrations\201805151254479_ThemDuLieuVaoDB.Designer.cs">
+      <DependentUpon>201805151254479_ThemDuLieuVaoDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ChungChi.cs" />
+    <Compile Include="Models\ChungChiSinhVien.cs" />
+    <Compile Include="Models\HopDong.cs" />
+    <Compile Include="Models\HuanLuyenVien.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -275,6 +289,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805151234578_InitialCreate.resx">
+      <DependentUpon>201805151234578_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805151254479_ThemDuLieuVaoDB.resx">
+      <DependentUpon>201805151254479_ThemDuLieuVaoDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -291,9 +313,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4243</DevelopmentServerPort>
+          <DevelopmentServerPort>5281</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4243/</IISUrl>
+          <IISUrl>http://localhost:5281/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
